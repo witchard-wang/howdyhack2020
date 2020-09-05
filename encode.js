@@ -1,5 +1,5 @@
 function encoder () {
     var text = document.getElementById("message").value;
-    document.getElementById("demo").innerHTML = text;
+    document.getElementById("out").innerHTML = text;
 }
 
