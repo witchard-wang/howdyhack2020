@@ -21,10 +21,12 @@ button {
 .textbox{
     flex-grow:1;
     padding-block: 10px;
-    padding-right: 10%;
+    padding-right: 40%;
     text-align:center;
 }
-
+.out{
+    text-align : center;
+}
 
 .dropbtn {
     background-color: thistle;
@@ -38,7 +40,7 @@ button {
 .dropdown {
     position: relative;
     display: inline-block;
-    padding-left: 10%;
+    padding-left: 30%;
 }
   
   /* Dropdown Content (Hidden by Default) */
