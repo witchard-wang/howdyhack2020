@@ -23,10 +23,9 @@ function encoder () {
     if (flag == "pig"){
         output = pig(text);
     }
-    if(flag = "caesar"){
+    else if(flag = "caesar"){
         output = caesar(text, keys);
     }
-    console.log(output);
     document.getElementById("out").innerHTML = output;
 
 }
@@ -40,6 +39,7 @@ function pig(word){
     else {
         code = word;
     }
+    console.log(word, code);
     return code;
 }
 
