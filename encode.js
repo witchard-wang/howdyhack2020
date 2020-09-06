@@ -13,7 +13,8 @@ function setflag(f){
 }
 
 function key(){
-    keys = document.getElementById("key").value;
+    keys = parseInt(document.getElementById("key").value);
+    console.log(keys);
 }
 
 function encoder () {
@@ -50,14 +51,14 @@ function isUpperCase(str) {
 //decipher the string
 let caesar = (str, key) => {
     console.log(str);
-
+    
     var result = "";
 	for (var i = 0; i < str.length; i++) {
 		var c = str.charCodeAt(i);
         if (65 <= c && c <=  90) 
-            result += String.fromCharCode((c - 65 + key) % 26 + 65);  // Uppercase
+            result += String.fromCharCode((c - 65 + keys) % 26 + 65);  // Uppercase
         else if (97 <= c && c <= 122) 
-            result += String.fromCharCode((c - 97 + key) % 26 + 97);  // Lowercase
+            result += String.fromCharCode((c - 97 + keys) % 26 + 97);  // Lowercase
         else
             result += str.charAt(i);  // Copy
 	}
