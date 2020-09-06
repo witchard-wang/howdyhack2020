@@ -11,7 +11,7 @@
     <h1>Encode Messages</h1>
     <div class="container">
         <div class="dropdown">
-            <button class="dropbtn">Select Encoding Type</button>
+            <button class="dropbtn">Encoding Type</button>
             <div class="dropdown-content">
                 <button id="option1" onclick=setflag(1)>Pig Latin</a>
                 <button id="option2" onclick=setflag(2)>Caesar Cipher</a>
@@ -24,12 +24,8 @@
             <button id ="submit" onclick=encoder()>submit</button>
         </div>
     </div>
-    <div class= "textbox2">
-        <label for="key">Enter key:</label>
-        <input type="text" id="key" name="key"> 
-        <button id ="submit" onclick=key()>submit</button>
-    </div>
-    <div class = "type" id= "type" ></div>
+    
+    <div id= "type"></div>
     <div class= "out" id="out"></div>
     
     

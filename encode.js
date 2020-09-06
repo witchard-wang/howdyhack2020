@@ -6,22 +6,21 @@ const alphabet = [
     'Y','Z'
   ];
 
-var flag = "pig";
-var keys = 1;
+var flag = "caesar";
+
 function setflag(f){
-    document.getElementById("type").style.visibility = 'visibile';
     if (f == 1){
-        flag = "pig";
-        document.getElementById("type").innerHTML = "Pig Latin Encoding";
+        flag = "pig"
+        document.getElementById("type").innerHTML = "Pig Latin Encoding"
     }
     else if(f == 2) {
-        flag = "caesar";
-        document.getElementById("type").innerHTML = "Caesar Cipher Encoding";
-    }   
+        flag = "caesar"
+        document.getElementById("type").innerHTML = "Caesar Cipher Encoding"
+    }
 }
 
-function key(){
-    keys = document.getElementById("key").value;
+function incrChar(ch, i) {
+    return String.fromCharCode(ch[i] + 1);            
 }
 
 function encoder () {
@@ -30,11 +29,18 @@ function encoder () {
     if (flag == "pig"){
         output = pig(text);
     }
-    if(flag = "caesar"){
-        output = caesar(text, keys);
-    }
+    // var text = [...text];
+    // var newText = []; 
+    // //create loop w/ incr
+    // for (let i = 0; i < text.length; i++) {
+    //     newText[i] = String.fromCharCode(text[i].charCodeAt() + 1);
+    // }
+    
+    // newText = incrChar(newText, 3);
+    // newText = newText.join('');
     console.log(output);
     document.getElementById("out").innerHTML = output;
+    // document.getElementById("message").innerHTML = Array.from(newText);
 
 }
 function pig(word){
@@ -50,27 +56,6 @@ function pig(word){
     return code;
 }
 
-//check if letter is uppercase
-function isUpperCase(str) {
-    return str === str.toUpperCase();
-}
-
-//decipher the string
-let caesar = (str, key) => {
-  let decipher = '';
-  
-  //decipher each letter
-  for(let i = 0; i < str.length; i++){
-    
-    //if letter is uppercase then add uppercase letters
-    if(isUpperCase(str[i])){
-      decipher += String.fromCharCode((str.charCodeAt(i) + key - 65) % 26 + 65);
-    }else{
-      //else add lowercase letters
-      decipher += String.fromCharCode((str.charCodeAt(i) + key - 97) % 26 + 97);
-    }
-  }
-  
-  
-  return decipher;
+function caesar(word, key){
+    console.log("yeet");
 }

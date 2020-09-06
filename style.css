@@ -15,7 +15,6 @@ button {
     margin: 4px 2px;
     cursor: pointer;
   }
-  
 .container{
     display:flex;
 }
@@ -25,16 +24,6 @@ button {
     padding-right: 40%;
     text-align:center;
 }
-.textbox2{
-    padding-block: 10px;
-    text-align:center;
-    
-}
-
-.type{
-    text-align:center;
-}
-
 .out{
     text-align : center;
 }
